@@ -103,11 +103,11 @@ int main(int argc, char *argv[]){
 	strcpy(request_logname, argv[3]);
 	strcpy(resolve_logname, argv[4]);
 
-	if(num_requestor != 10){
+	if(num_requestor > 10){
 		printf("The number of requestor threads must be set to 10.\n");
 		return -1;
 	}
-	if(num_resolver != 10){
+	if(num_resolver > 10){
 		printf("The number of resolver threads must be set to 10.\n");
 		return -1;
 	}
@@ -121,7 +121,7 @@ int main(int argc, char *argv[]){
 
 
 	stack_struct stack; 
-		for(int i = 0; i < STACK_SIZE; i++)
+	for(int i = 0; i < STACK_SIZE; i++)
 	 	strcpy(stack.array[i], "");
 	stack.top = 0;
 	stack.empty_count = &empty_count;
