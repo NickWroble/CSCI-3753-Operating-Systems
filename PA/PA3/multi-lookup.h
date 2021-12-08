@@ -27,6 +27,8 @@ typedef struct {
 	stack_struct *stack;
 	sem_t *outfp_mutex;
 	sem_t *stdout_mutex;
+
+	pthread_mutex_t dns_lock;
 } pthread_create_resolve_args; 
 
 
@@ -37,6 +39,9 @@ typedef struct {
 	char **argv;
 	stack_struct *stack;
 	sem_t *stdout_mutex, *args_mutex; 
+
+	pthread_mutex_t outfp_lock;
+	pthread_mutex_t reslog_lock;
 } pthread_create_request_args;
 
 int 	stack_init	(stack_struct *s);

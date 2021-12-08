@@ -3,6 +3,8 @@
 #include "util.h"
 #include "sys/time.h"
 
+
+
 void* producer(void *ptr){     	 // place element on the top of the array
 	char *input_filename;
 	char hostname[MAX_NAME_LENGTH];
@@ -55,7 +57,8 @@ void* consumer(void *ptr){
 			//print(((pthread_create_resolve_args*)ptr)->stack);
 			sem_post(((pthread_create_resolve_args*)ptr)->stack->mutex); //unlock buffer
 			sem_post(((pthread_create_resolve_args*)ptr)->stack->empty_count); //increment number of empty spots
-			sem_wait(((pthread_create_resolve_args*)ptr)->outfp_mutex);
+
+			
 			char ip_addr[MAX_IP_LENGTH];
 			if(dnslookup(hostname, ip_addr, 32) == -1){
 				strcpy(ip_addr, NOT_RESOLVED);
@@ -64,8 +67,10 @@ void* consumer(void *ptr){
 			else{
 				num_resolved++;
 			}
+			sem_wait(((pthread_create_resolve_args*)ptr)->outfp_mutex);
 			fprintf(((pthread_create_resolve_args*)ptr)->res_outfile, "%s, %s\n", hostname, ip_addr);
 			sem_post(((pthread_create_resolve_args*)ptr)->outfp_mutex);
+
 		}
 	printf("thread 0x%lx resolved %d hostnames.\n", pthread_self(), num_resolved);
 	return NULL;
