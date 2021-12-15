@@ -1,0 +1,42 @@
+File completely serviced: input/names11.txt
+File completely serviced: input/names15.txt
+File completely serviced: input/names13.txt
+File completely serviced: input/names14.txt
+File completely serviced: input/names2.txt
+File completely serviced: input/names23.txt
+File completely serviced: input/names12.txt
+File completely serviced: input/names1.txt
+File completely serviced: input/names21.txt
+File completely serviced: input/names22.txt
+File completely serviced: input/names24.txt
+File completely serviced: input/names25.txt
+File completely serviced: input/names33.txt
+File completely serviced: input/names3.txt
+File completely serviced: input/names34.txt
+File completely serviced: input/names4.txt
+File completely serviced: input/names31.txt
+File completely serviced: input/names32.txt
+File completely serviced: input/names35.txt
+File completely serviced: input/names41.txt
+File completely serviced: input/names42.txt
+File completely serviced: input/names44.txt
+File completely serviced: input/names5.txt
+File completely serviced: input/names43.txt
+File completely serviced: input/names45.txt
+File completely serviced: input/names52.txt
+File completely serviced: input/names54.txt
+File completely serviced: input/names53.txt
+File completely serviced: input/names51.txt
+File completely serviced: input/names55.txt
+thread 0xd681700 resolved 76 hostnames.
+thread 0xae7c700 resolved 77 hostnames.
+thread 0xce80700 resolved 48 hostnames.
+thread 0xee84700 resolved 51 hostnames.
+thread 0xc67f700 resolved 70 hostnames.
+thread 0xde82700 resolved 61 hostnames.
+thread 0xb67d700 resolved 50 hostnames.
+thread 0xe683700 resolved 69 hostnames.
+thread 0xa67b700 resolved 55 hostnames.
+thread 0xbe7e700 resolved 43 hostnames.
+
+./multi-lookup: total time is 3.354155 seconds
